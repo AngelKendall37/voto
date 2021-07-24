@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Panel de Votaciones</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+    <style>
+      .headerFont{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 24px;
+      }
+
+      .subFont{
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        
+      }
+      
+      .specialHead{
+        font-family: 'Oswald', sans-serif;
+      }
+
+      .normalFont{
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+  <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse
+    " role="navigation">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand headerFont text-lg"><strong>Inicio</strong></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="example-nav-collapse">
+          <ul class="nav navbar-nav">
+            
+          </ul>
+          
+
+          
+        </div>
+
+      </div> 
+    </nav>
+ 
+   
+
+    <div class="container" style="padding:100px;">
+      <div class="row">
+        <div class="col-sm-12" style="border:2px solid gray;">
+          
+          <div class="page-header">
+            <h2 class="specialHead">Elige tu Candidato.</h2>
+            <p class="normalFont">Prueba que eres un Votante Correcto<i class="fas fa-autoprefixer    "></i>.</p>
+          </div>
+          
+          <form action="saveVote.php" method="POST">
+          <div class="form-group">
+            <label>Nombre:</label><br>
+            
+            <input type="text" name="voterName" title="Enter Your Full Name" placeholder="Ingresa tu nombre" class="form-control" required/><br>
+
+            <label>Apellidos:</label><br>
+            <input type="text" name="voterEmail" placeholder="Ingresa tus apellidos" class="form-control"/><br>
+
+            <label>Numero de documento:</label><br>
+            <input id="id1" type="text" name="voterID" placeholder="Ingresa tu numero de documento " class="form-control" required/><br>
+            
+            <h3 class="normalFont">Seleccina uno de los siguientes:</h3>
+            <div class="radio">
+              <label for="">
+                <input type="radio" name="selectedCandidate" value="IDM"> <strong>Oswaldo Guzman</strong>
+              </label><br>
+
+              <label for="">
+                <input type="radio" name="selectedCandidate" value="GP"> <strong>Lucas Martinez </strong> 
+              </label><br>
+              
+              <label for="">
+                <input type="radio" name="selectedCandidate" value="JMS"> <strong>Ruben Baena</strong>
+              </label><br>
+
+              <label for="">
+                <input type="radio" name="selectedCandidate" value="PV"> <strong>Genesis Rubio</strong>
+              </label><br>
+              <br>
+              <hr>
+              <button type="submit" name="submit" class="btn btn-primary"><strong>Enviar</strong></button>
+              <button type="submit" class="btn btn-default">Cancelar</button>
+            </div>
+          </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
